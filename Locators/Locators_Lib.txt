@@ -9,3 +9,6 @@ ${calculate_tip_btn}=     //android.widget.Button[@resource-id="org.traeg.fastip
 ${tip_percent_value_textfield}=     //android.widget.TextView[@resource-id="org.traeg.fastip:id/tipPctTextView"]
 ${tip_value_textfield}=     //android.widget.TextView[@resource-id="org.traeg.fastip:id/tipAmtTextView"]
 ${total_value_textfield}=     //android.widget.TextView[@resource-id="org.traeg.fastip:id/totalAmtTextView"] 
+${update_tip_textbox}= 		//android.widget.EditText[@resource-id="org.traeg.fastip:id/tipPercentageEditText"]
+${save_settings_btn}= 		//android.widget.Button[@resource-id="org.traeg.fastip:id/saveSettingsButton"]
+${tip_percentage_text}=     //android.widget.TextView[@resource-id="org.traeg.fastip:id/textView1"]

@@ -23,7 +23,7 @@ Wait And Click On Element
     [Documentation]    Wait till 30 sec and click if element found
     [Arguments]    ${Element_xpath}
     
-    Wait Until Page Contains Element    ${Element_xpath}    30s    ${error_mesg} ${Element_xpath}
+    Wait Until Page Contains Element    ${Element_xpath}    30s    ${error_message} ${Element_xpath}
     Click Element    ${Element_xpath} 
 
 Setting Up
@@ -47,6 +47,15 @@ Get Value From String
     ${val}=        Convert To Number      ${value_text}
     [return]     ${val}
 
+Calculate Tip Amount
+    [Arguments]   ${bill_amount}    ${tip_perc}
+    ${tip}=    Evaluate     ${bill_amount} * ${tip_perc} / 100
+    [return]    ${tip}
+
+Calculate Total Amount
+    [Arguments]   ${bill_amount}    ${tip_amount}
+    ${total_bill}=    Evaluate     ${bill_amount} + ${tip_amount}
+    [return]    ${total_bill}
 
 
 

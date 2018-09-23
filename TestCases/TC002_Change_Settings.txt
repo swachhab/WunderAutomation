@@ -1,0 +1,43 @@
+*** Settings ***
+Library    		AppiumLibrary
+Library    		Collections
+Resource    	../Locators/Locators_Lib.txt
+Resource        ../Library/Common_Keywords.txt
+Library         ../Library/ApplicationLibrary.py
+
+Test Setup       Launch Application  	${remote_url}  
+Test Teardown    Close Application
+
+*** Variables ***
+${remote_url}=		http://0.0.0.0:4723/wd/hub
+${app_title_text}= 		FasTip
+${bill_amt}=     100
+${new_tip_perc}=     20
+
+*** TestCase ***
+
+TC2 Change Settings
+    [Documentation]    Update Tip And Verify Change
+ 
+    Navigate To Settings Page And Validate UI And Input Tip
+    Save Settings And Navigate Back And Validate New Tip
+
+
+*** Keywords ***
+Navigate To Settings Page And Validate UI And Input Tip
+    [Documentation]    Navigate To Settings
+    Sleep    2s
+    Wait And Click On Element      ${settings_btn}
+    Wait Until Page Contains Element      ${update_tip_textbox}      30      ${error_message} ${update_tip_textbox}
+    Element Should Contain Text     ${tip_percentage_text}      Tip Percentage
+    Clear Text     ${update_tip_textbox}
+    Input Text     ${update_tip_textbox}     ${new_tip_perc}
+
+Save Settings And Navigate Back And Validate New Tip
+	[Documentation]    Navigate To Settings
+	Click Element    ${save_settings_btn}
+    Wait Until Page Contains Element      ${tip_percent_value_textfield}      30      ${error_message} ${tip_percent_value_textfield}
+	${tip_perc}=     Get Text     ${tip_percent_value_textfield}
+	${tip_perc_final}= 		Get Value From String     ${tip_perc}
+    Run Keyword If    ${new_tip_perc}!=${tip_perc_final}    Fail    Tip not updated succesfully
+

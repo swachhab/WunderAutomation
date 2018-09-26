@@ -59,7 +59,7 @@ FasTip
  
  # How To Execute Test Cases
  FrameworkArchitecture.png
- ![alt text](https://github.com/swachhab/WunderAutomation/FrameworkArchitecture.png)
+ ![alt text](https://github.com/swachhab/WunderAutomation/blob/master/FrameworkArchitecture.png)
  
  
  * Execution Reports

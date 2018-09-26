@@ -51,7 +51,17 @@ FasTip
   * All UI Elements must be present
   * Value Of Tip Should be Changed on Home Page As On Settings Page
   * Total Amount Should be correct based on new Tip Percentage.
-  
+ 
+ # Folder Structure
+ 
+ 
+ 
+ 
+ # How To Execute Test Cases
+ 
+ ![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+ 
+ 
  * Execution Reports
  [Report](http://robotframework.org/robotframework/latest/libraries/BuiltIn.html)
 

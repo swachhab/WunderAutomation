@@ -53,18 +53,22 @@ FasTip
   * Total Amount Should be correct based on new Tip Percentage.
  
  # Folder Structure
- 
- 
- 
- 
- # How To Execute Test Cases
- FrameworkArchitecture.png
+ * Used Keyword Driven Framework - Robot Framework, Just written a small wrapper to execute test cases on android device(Can be used for iOS devices as well)
+ * Basic Architecture Overview of Framework used is
  ![alt text](https://github.com/swachhab/WunderAutomation/blob/master/FrameworkArchitecture.png)
  
+ # How To Execute Test Cases
+ * Firstly full setup should be there as above pre-requisites must be completed.
+ * Connect an android device to system
+ * Run Appium - "appium -p 4723"
+ * Now open Batch directory 
+ * Select Test Cases, Test cases which need to be run can be selected in "test_selector.ini" file
+ * Execute Batch file
+ * After Execution find reports under "Reports" folder inside that timestamp directory.
+
  
  * Execution Reports
  [Report](http://robotframework.org/robotframework/latest/libraries/BuiltIn.html)
-
 
 
 * Important Links

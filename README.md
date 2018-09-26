@@ -58,8 +58,8 @@ FasTip
  
  
  # How To Execute Test Cases
- 
- ![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+ FrameworkArchitecture.png
+ ![alt text](https://github.com/swachhab/WunderAutomation/FrameworkArchitecture.png)
  
  
  * Execution Reports
